@@ -1,0 +1,24 @@
+<p>Name: <%= @artists.name %> </p>
+<p>
+ Age  <%= @artists.age %>" 
+</p>
+<p>bio: <%= @artists.bio  %> </p>
+
+<hr>
+
+<form method="POST" action='<%= "/artists/#{@artists.id}" %>'>
+  <input type="hidden" name="_method" value="DELETE">
+  
+  <input type="submit" value="Delete this artists" />
+</form>
+
+
+<a href="/artists">
+  Take me back to the artist 
+</a>
+
+<hr>
+
+<a href= "<%="/artists/#{@artists.id}/edit"%>">
+  Edit this artist
+</a>

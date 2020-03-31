@@ -1,0 +1,13 @@
+<h1> Names </h1>
+<ul>
+   <% @artists.each do |artist_instance| %>
+    <li> 
+ 
+    <a href="<%= "/artists/#{artist_instance.id}" %>"> 
+    <%= artist_instance.name() %> 
+    
+    </a>
+    </li>
+
+   <% end %>
+</ul>

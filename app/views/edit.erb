@@ -1,0 +1,31 @@
+<h1>Editing A Break</h1>
+
+<form method="POST" action="<%= "/artists/#{@artists.id}" %>">
+  <input type="hidden" name="_method" value="PATCH">
+
+  <label for="name">Name</label>
+  <input type="text"
+    name="artistInformation[name]"
+    id="name"
+    value="<%= @artists.name %>"
+  >
+
+  <br>
+  <label for="age">age</label>
+  <input type="text"
+    name="artistInformation[age]"
+    id="age"
+    value="<%= @artists.age %>"
+  >
+
+  <br>
+  <label for="length">bio</label>
+  <input type="text"
+    name="artistInformation[bio]"
+    id="length"
+    value="<%= @artists.bio %>"
+  >
+
+  <br>
+  <input type="submit" value="Editing the break">
+</form>
